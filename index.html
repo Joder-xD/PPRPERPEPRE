@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dua Lipa | Official Site</title>
+  <meta name="description" content="The official website for Dua Lipa. Sign up now.">
+  <meta name="robots" content="index, follow, noimageai, noai">
+  <meta property="og:image" content="img/RO_favOG.jpg">
+  <meta property="og:title" content="Dua Lipa | Official Site">
+  <meta property="og:description" content="The official website for Dua Lipa. Sign up now.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cache-control" content="max-age=0">
+
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <audio autoplay loop>
+    <source src="https://d2cstorage-a.akamaihd.net/atl/dualipa/ocean-background-sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <video class="dl-video dl-video--desktop" autoplay playsinline muted loop>
+    <source src="https://d2cstorage-a.akamaihd.net/atl/dualipa/desktop-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video class="dl-video dl-video--mobile" autoplay playsinline muted loop>
+    <source src="https://d2cstorage-a.akamaihd.net/atl/dualipa/mobile-bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="container">
+    <div class="center-content">
+      <h1>respeta a mi novia dua lipa <i class="fa fa-heart"></i></h1>
+      <label for="file-input" class="custom-file-input">Selecciona una imagen</label>
+      <input type="file" id="file-input">
+      <img id="selected-image" style="display:none; margin-top: 20px;" width="150" alt="Selected Image">
+    </div>
+    <div class="bottom">
+      <div class="desktopFooterWrapper">
+        <span class="cpy-line">&copy; <script>
+            document.write(new Date().getFullYear())
+          </script> Radical22 LTD</span>
+        <div class="desktopFooterWrapper__terms">
+          <a target="_blank" href="https://privacy.wmg.com/wmi/terms-of-use/">Terms of Use</a>
+          <span class="cpy-sep">&nbsp;|&nbsp;</span>
+          <a target="_blank" href="https://privacy.wmg.com/wmi/privacy">Privacy</a>
+          <span class="ad-sep">&nbsp;|&nbsp;</span>
+          <a target="_blank" href="https://www.wminewmedia.com/cookies-policy/">Cookies Policy</a>
+          <span class="cp-sep">&nbsp;|&nbsp;</span>
+          <a class="ot-sdk-show-settings" style="cursor: pointer">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('file-input').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.getElementById('selected-image');
+          img.src = e.target.result;
+          img.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+
+</html>
+
+
+<style>
+  
+  
+  
+  
+  /* Styles for background video */
+.dl-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5); /* Ajusta el brillo del video */
+}
+
+.dl-video--desktop {
+  display: none;
+}
+
+.dl-video--mobile {
+  display: block;
+}
+
+@media(min-width: 768px) {
+  .dl-video--desktop {
+    display: block;
+  }
+
+  .dl-video--mobile {
+    display: none;
+  }
+}
+
+/* Container styles */
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+/* Center content styles */
+.center-content {
+  text-align: center;
+}
+
+.center-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.custom-file-input {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff006e;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-input:hover {
+  background-color: #ff5e78;
+}
+
+#file-input {
+  display: none;
+}
+
+/* Styles for selected image */
+#selected-image {
+  display: none;
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 10px;
+  border: 3px solid #ff006e;
+}
+
+/* Footer styles */
+.bottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.cpy-line {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.desktopFooterWrapper__terms {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.desktopFooterWrapper__terms a {
+  color: white;
+  text-decoration: none;
+}
+
+.desktopFooterWrapper__terms a:hover {
+  text-decoration: underline;
+}
+
+  
+  </style>
